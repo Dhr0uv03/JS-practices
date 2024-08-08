@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+
+    <ul id="images">
+
+        <li><img width="200px" id="photoshop" src="D:\Images 2024\-6260455544989007230_121.jpg" alt="photoshop"></li>
+        <li><img width="200px" id="japan" src="D:\Images 2024\-6267116227516283542_121.jpg" alt=""></li>
+        <li><img width="200px" id="river" src="D:\Images 2024\-6260455544989007343_121.jpg" alt=""></li>
+        <li><img width="200px" id="owl" src="D:\Images 2024\-6260455544989007284_121.jpg" alt=""></li>
+        <li><img width="200px" id="prayer" src="D:\Images 2024\-6260455544989007257_121.jpg" alt=""></li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">GOOGLE</a></li>
+    </ul>
+    
+</body>
+<script>
+                                                             //attachEvent()  ,   jQuery-on (onEventListener)
+                                                             // type , defaultPrevented , target , srcElement ,
+                                                             // currentTarget , clientX , clientY , screenX , screenY
+                                                             // altKey , ctrlKey , shiftKey , keyCode 
+
+
+    //   document.getElementById('owl').onclick = function(){
+    //     alert("you clicked on me bro")
+    //   }
+    
+    // document.getElementById('images').addEventListener('click', function(e){
+    //   console.log("click inside the ul");
+    // },false)                                
+
+    // document.getElementById('photoshop').addEventListener('click', function(e){
+    //      console.log("clicked me");
+    //     e.stopPropagation()
+    // },false)                                              // bubbling , goes from down to up
+     
+
+    //     document.getElementById(google).addEventListener('click', function(e){
+    //         e.preventDefault()
+    //         e.stopPropagation()
+    //         console.log("google clicked");
+            
+    //     }, false )
+
+        document.querySelector('#images').addEventListener('click',function(e){
+            
+            console.log(e.target.tagName);
+
+            if (e.target.tagName === "IMG") {
+                console.log(e.target.id);
+                
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+            }
+            
+        },false)
+
+
+</script>
+</html>
+
