@@ -105,7 +105,7 @@ console.log(course_name)
 const{course_name :name} = course1
 console.log(name)
 
-// json is object without name , key-value bothnare strings\
+// json is object without name , key-value both are strings\
 //     json used while fetching data with the help of APIs.
 
 // {
